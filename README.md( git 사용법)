@@ -1,0 +1,11 @@
+# git 사용법
+
+1. git init
+2.    git config --global core.autocrlf true  
+  git config --global user.name 'sejung1997'  
+  git config --global user.email 'ksgve1997814@naver.com'  
+  git config --global --list  
+3. git add . (모든 파일의 변경사항 추적하기) 개별파일: git add 파일이름
+4. git commit -m '' ( 버전 생성하기)  확인: git log
+5. git remote add origin 저장소 주소 
+6. git push origin master (깃에 원격 업로드)
