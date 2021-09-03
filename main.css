@@ -1,3 +1,5 @@
+/* common */
+
 body {
   font-family: 'Nanum Gothic', sans-serif;
   color: #333;
@@ -6,6 +8,15 @@ body {
   line-height: 1.4;
   
 }
+
+img {
+  display: block; 
+}
+a {
+  text-decoration: none;
+}
+
+/* header */
 header {
   width: 100%;
   background-color: #f6f5f0;
@@ -15,7 +26,7 @@ header {
   z-index: 9;
 
 }
-header >.inner {
+header .inner {
   height: 120px;
 
 
@@ -33,14 +44,67 @@ header .logo {
   size: 100%;
 
 }
-img {
-  display: block;
-}
-a {
-  text-decoration: none;
-}
+
+
 .inner {
   width: 1100px;
   margin: 0 auto;
   position: relative;
+}
+header .sub-menu {
+  background-color: aqua;
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 0;
+} 
+header .sub-menu .menu {
+  font-family: Arial, sans-serif;
+  display: flex;
+  
+}
+header .inner .sub-menu .menu li {
+  position: relative;
+
+}
+header .inner .sub-menu .menu li::before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  position: absolute;   /*display: block;*/
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+}
+header .inner .sub-menu .menu li:first-child:before {
+  display: none;
+}
+header .inner .sub-menu .menu li a {
+  font-size: 12px;
+  padding: 11px 16px;  /*사용자가 클릭하는 영역을 넓히기 위해서*/
+  display: block;
+  color: #656565;
+}
+header .inner .sub-menu .menu li a:hover {
+   
+}
+header.sub-menu .search {
+  position: relative;
+ 
+
+}
+header.sub-menu .search input {
+
+}
+header.sub-menu .search .material-icons {
+  position: absolute;
+  height: 27px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+header .inner .sub-menu .search .text {
+
 }
