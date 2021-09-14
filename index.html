@@ -36,26 +36,33 @@
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
   <script defer src="./js/main.js"></script>
+
 </head>
 
 
 <body>
   <header>
     <div class="inner">
-      <a href="/index.html" class="logo">
-      <img src="./images/starbucks_logo.png" alt="STARBUCKS">
-      </a>
+      <div class="logo">
+        <a href="/index.html"><img src="images/starbucks_logo.png" alt="STARBUCKS"></a>
+      </div>
 
       <div class="sub-menu">
         <ul class="menu">
-          <li><a href="/signin">Sign In</a></li>
-          <li><a href="/">My Starbucks</a></li>
-          <li><a href="/">Custormer Service</a></li>
-          <li><a href="/">Find a Store</a></li>
+          <li><a href="./">Sign In</a></li>
+          <li><a href="javascript:void(0)">My Starbucks</a></li>
+          <li><a href="javascript:void(0)">Customer Service & Ideas</a></li>
+          <li><a href="javascript:void(0)">Find a Store</a></li>
         </ul>
+
         <div class="search">
-          <input type="text">
+          <input type="text" >
           <div class="material-icons">search</div>
         </div>
       </div>
@@ -357,20 +364,81 @@
           </div>
         </li>
       </ul>
-      
 
-
-    </div>
-    <div class="badges">
-      <div class="badge">
-        <img src="./images/badge1.jpg" alt="badge">
-      </div>
-      <div class="badge">
-        <img src="./images/badge2.jpg" alt="badge">
+      <div class="badges">
+        <div class="badge">
+          <a href="javascript:void(0)"><img src="./images/badge1.jpg" alt="badge1"></a>
+        </div>
+        <div class="badge">
+          <a href="javascript:void(0)"><img src="./images/badge3.jpg" alt="badge3"></a>
+        </div>
       </div>
     </div>
-
+    
   </header>
-  
-</body> 
-</html>
+  <section class="visual">
+    <div class="inner">
+
+      <div class="title fade-in">
+        <img src="./images/visual_title.png" alt="STARBUCKS DELIGHTFUL">
+        <a href="javascript:void(0)" class="btn btn--brown">자세히 보기</a>
+      </div>
+      <div class="fade-in">
+        <img src="./images/visual_cup1.png" alt="NEW OATMEAL LATTE" class="cup1 image">
+        <img src="./images/visual_cup1_text.png" alt="오트밀 라떼" class="cup1 text">
+      </div>
+      <div class="fade-in">
+        <img src="./images/visual_cup2.png" alt="CARAMEL MACA" class="cup2 image">
+        <img src="./images/visual_cup2_text.png" alt="카라멜 모카" class="cup2 text">
+      </div>
+      <div class="fade-in">
+        <img src="./images/visual_spoon.png" alt="SPOON" class="spoon">
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="notice">
+    <div class="notice-line">
+      <div class="bg-left"></div>
+      <div class="bg-right"></div>
+      <div class="inner">
+        <div class="inner__left">
+          <h2>공지사항</h2>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="javascript:void(0)">추석연휴 안내</a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)">시스텀 개선 안내</a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)">gift 배송하기 안내</a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)">사이렌 오더 안내</a>
+              </div>
+            </div>
+          
+          </div>
+          <a href="javascript:void(0)" class="notice-line__more">
+            <div class="material-icons">add_circle</div>
+          </a>
+          
+        </div>
+        <div class="inner__right">
+          <h2>스타벅스 프로모션</h2>
+          <div class="toggle-promotion">
+            <div class="material-icons">upload</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="promotion">
+      <div class="swiper-container">text</div>
+    </div>
+  </section>  
+
+</body>
