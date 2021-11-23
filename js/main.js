@@ -17,7 +17,7 @@ searchInputEl.addEventListener('blur', function () {
 })
 
 const badgesEl = document. querySelector('header .badges')
-
+const toTopEl = document.querySelector('#to-top')
 window.addEventListener('scroll', _.throttle( function () {
   console.log(window.scrollY)
   if(window.scrollY > 500) {
@@ -27,18 +27,32 @@ window.addEventListener('scroll', _.throttle( function () {
       opacity: 0,
       display: 'none'
 
-    });
+    })
+    gsap.to(toTopEl, .2, {
+      x: 0
+    })
   } else {
     // badgesEl.style.display = 'block';
     gsap.to(badgesEl, .6, {
       opacity: 1,
       display: 'block'
 
-    });
+    })
+    gsap.to(toTopEl, .2, {
+      x: 100
+    })
   }
  
 }, 300))
 // ./throttle(함수, 시간)
+
+
+
+toTopEl.addEventListener('click', function () {
+  gsap.to(window, .7, {
+    scrollTo: 0
+  })
+})
 
 const fadeEls = document.querySelectorAll('.visual .fade-in');
 fadeEls.forEach((fadeEl, index) => {
@@ -63,7 +77,7 @@ new Swiper('.promotion .swiper-container', {
   loop: true,
   // autoplay: {
   //   delay: 1000 //.5초
-  // }
+  // },
   pagination: {
     el: '.promotion .swiper-pagination', //페이지 요소
     clickable: true // 사용자의 페이지 번호 제어 가능 
@@ -74,6 +88,17 @@ new Swiper('.promotion .swiper-container', {
   }
 
 })
+new Swiper('.awards .swiper-container'), {
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 5,
+  navigation: {
+    prevEl: '.awards .swiper-prev',
+    nextEl: '.awards .swiper-next'
+  }
+  
+}
 
 const promotionEl = document.querySelector('.promotion')
 const promotionToggleBtn = document.querySelector('.toggle-promotion')
@@ -123,3 +148,7 @@ spyEls.forEach(function (spyEl) {
     .addTo(new ScrollMagic.Controller())
 
 })
+
+const thisYear = document.querySelector('.this-year')
+thisYear.textContent = new Date().getFullYear() //2021
+
