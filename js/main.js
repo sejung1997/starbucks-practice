@@ -75,9 +75,9 @@ new Swiper('.promotion .swiper-container', {
   spaceBetween: 10,
   centeredSlides: true, //1번슬라이드가 가운데보이기
   loop: true,
-  // autoplay: {
-  //   delay: 1000 //.5초
-  // },
+  autoplay: {
+    delay: 1000 //.5초
+  },
   pagination: {
     el: '.promotion .swiper-pagination', //페이지 요소
     clickable: true // 사용자의 페이지 번호 제어 가능 
