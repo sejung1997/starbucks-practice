@@ -9,3 +9,7 @@
 4. git commit -m '' ( 버전 생성하기)  확인: git log
 5. git remote add origin 저장소 주소 
 6. git push origin master (깃에 원격 업로드)
+
+git branch : branch 목록 보기
+git branch ( ) : branch 생성 
+git checkout ( ) : branch 바꾸기 
